@@ -1,6 +1,6 @@
 image: Ubuntu1804  # образ для сборки
 
-stack: node 10  # окружение
+stack: node 14  # окружение
 
 branches:
   only:
@@ -9,6 +9,7 @@ branches:
 cache: node_modules  # кеширование
 
 install:
+  - ps: Install-Product node 14
   - yarn install  # команда установки зависимостей
 
 build: off  # отключаем встроенную в appveyor систему сборки
