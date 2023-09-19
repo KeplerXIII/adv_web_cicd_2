@@ -3,7 +3,8 @@
     "yarn": "^1.22.19"
   },
   "scripts": {
-    "start": "live-server src"
+    "start": "live-server src",
+    "lint": "eslint ."
   },
   "name": "Bobr",
   "version": "1.0.0",
@@ -12,6 +13,11 @@
   "author": "Alexander Pushkin (Home) <a.v.pushkin@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
     "live-server": "^1.2.2"
   }
 }
