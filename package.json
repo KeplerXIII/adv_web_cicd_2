@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "yarn": "^1.22.19"
+  },
+  "scripts": {
+    "start": "live-server src"
+  },
+  "name": "Bobr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/KeplerXIII/adv_web_cicd_2.git",
+  "author": "Alexander Pushkin (Home) <a.v.pushkin@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
