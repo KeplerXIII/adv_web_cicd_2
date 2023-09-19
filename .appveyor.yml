@@ -1,25 +1,26 @@
-image: Ubuntu1804  # образ для сборки
-
-stack: node 10  # окружение
+stack: node 10  # Окружение
 
 branches:
   only:
-    - main  # ветка git
+    - main  # Ветка git
 
-cache: node_modules  # кеширование
+cache:
+  directories:
+    - ~/.cache/yarn  # Кеш для Yarn
+    - node_modules  # Кеш для зависимостей
 
 install:
-  - npm install  # команда установки зависимостей
+  - yarn install  # Команда установки зависимостей с использованием Yarn
 
-build: off  # отключаем встроенную в appveyor систему сборки
+build: off  # Отключаем встроенную в AppVeyor систему сборки
 
 build_script:
-  - npm run build   # команда сборки
+  - yarn build   # Команда сборки с использованием Yarn
 
 test_script:
-  - npm run lint && npm test  # скрипт тестирования
+  - yarn lint && yarn test  # Скрипт тестирования с использованием Yarn
 
-deploy_script:  # скрипт развёртывания
+deploy_script:  # Скрипт развёртывания
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
