@@ -1,0 +1,1 @@
+Build status: [![Build status](https://ci.appveyor.com/api/projects/status/dvydp9gy88xtsc3l?svg=true)](https://ci.appveyor.com/project/KeplerXIII/adv-web-cicd-2)
