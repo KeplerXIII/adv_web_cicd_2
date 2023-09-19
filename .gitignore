@@ -1,3 +1,7 @@
+# compile
+dist
+doc
+
 # Logs
 logs
 *.log
