@@ -1,5 +1,5 @@
-import { CharMoving } from './components/char_moving'
-import { CellCreator } from './components/cell_create'
+import { CharMoving } from './components/widget_game/char_moving'
+import { CellCreator } from './components/widget_game/cell_create'
 
 document.addEventListener('DOMContentLoaded', function () {
   const gameContainer = document.getElementById('game-container')
