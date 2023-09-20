@@ -1,4 +1,4 @@
-export class CharMoving {
+export class Character {
   constructor (elem) {
     this.gameContainer = elem
     const character = document.createElement('img')

@@ -1,4 +1,4 @@
-export class CellCreator {
+export class Field {
   constructor (elem) {
     this.elem = elem
   }

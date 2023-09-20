@@ -1,21 +1,21 @@
-import { CharMoving } from './components/widget_game/char_moving'
-import { CellCreator } from './components/widget_game/cell_create'
+import { Character } from './components/widget_game/character'
+import { Field } from './components/widget_game/field'
 
 document.addEventListener('DOMContentLoaded', function () {
   const gameContainer = document.getElementById('game-container')
-  const charMover = new CharMoving(gameContainer)
-  const cellCreator = new CellCreator(gameContainer)
+  const character = new Character(gameContainer)
+  const field = new Field(gameContainer)
 
   // Создаём поле
-  cellCreator.createField(16)
+  field.createField(16)
 
   // Генерируем случайную начальную позицию для персонажа
-  const initialPosition = charMover.getRandomPosition(0)
-  charMover.moveCharacter(initialPosition)
+  const initialPosition = character.getRandomPosition(0)
+  character.moveCharacter(initialPosition)
 
   // Устанавливаем интервал для перемещения персонажа
   setInterval(function () {
-    const newPosition = charMover.getRandomPosition(charMover.currentPosition())
-    charMover.moveCharacter(newPosition)
+    const newPosition = character.getRandomPosition(character.currentPosition())
+    character.moveCharacter(newPosition)
   }, 1000)
 })
