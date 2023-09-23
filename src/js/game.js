@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
   field.createField(16)
 
   // Генерируем случайную начальную позицию для персонажа
-  const initialPosition = character.getRandomPosition(0)
+  const initialPosition = character.getRandomPosition(character.currentPosition)
   character.moveCharacter(initialPosition)
 
   // Устанавливаем интервал для перемещения персонажа
   setInterval(function () {
-    const newPosition = character.getRandomPosition(character.currentPosition())
+    const newPosition = character.getRandomPosition(character.currentPosition)
     character.moveCharacter(newPosition)
   }, 1000)
 })

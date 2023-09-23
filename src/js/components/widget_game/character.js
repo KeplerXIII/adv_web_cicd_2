@@ -1,6 +1,7 @@
 export class Character {
   constructor (elem) {
     this.gameContainer = elem
+    this.currentPosition = 0
     const character = document.createElement('img')
     character.src = 'https://github.com/netology-code/ahj-homeworks/blob/video/dom/pic/goblin.png?raw=true'
     character.id = 'character'
@@ -9,12 +10,8 @@ export class Character {
 
   moveCharacter (position) {
     const cell = document.getElementById('cell-' + position)
+    this.currentPosition = position
     cell.appendChild(this.character)
-  }
-
-  currentPosition () {
-    const currentPosition = document.getElementById('character')
-    return currentPosition.parentElement.id.slice(5)
   }
 
   getRandomPosition (lastPosition) {
