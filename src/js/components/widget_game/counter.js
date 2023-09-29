@@ -1,3 +1,7 @@
+import { Popup } from '../widget_popup/popup'
+
+const popup = new Popup('.popup-container')
+
 export class Counter {
   constructor (elem) {
     if (typeof elem === 'string') {
@@ -15,5 +19,8 @@ export class Counter {
 
   addBadScore () {
     this.badScore += 1
+    if (this.badScore > 4) {
+      popup.openPopup()
+    }
   }
 }
