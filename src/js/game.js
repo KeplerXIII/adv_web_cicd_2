@@ -10,28 +10,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   field.createField(16)
 
-  const initialPosition = character.getRandomPosition(character.currentPosition)
-  character.moveCharacter(initialPosition)
-
-  let moveInterval = setInterval(function () {
+  function moveAndCount () {
     const newPosition = character.getRandomPosition(character.currentPosition)
     character.moveCharacter(newPosition)
     counter.addBadScore()
-  }, 1000)
+  }
+
+  let moveInterval = setInterval(moveAndCount, 1000)
 
   character.character.addEventListener('click', function () {
     counter.addScore()
     counter.badScore = 0
-
     clearInterval(moveInterval)
-
-    const newPosition = character.getRandomPosition(character.currentPosition)
-    character.moveCharacter(newPosition)
-
-    moveInterval = setInterval(function () {
-      const newPosition = character.getRandomPosition(character.currentPosition)
-      character.moveCharacter(newPosition)
-      counter.addBadScore()
-    }, 1000)
+    moveAndCount()
+    moveInterval = setInterval(moveAndCount, 1000)
   })
 })
