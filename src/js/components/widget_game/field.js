@@ -1,5 +1,8 @@
 export class Field {
   constructor (elem) {
+    if (typeof elem === 'string') {
+      elem = document.querySelector(elem)
+    }
     this.elem = elem
   }
 

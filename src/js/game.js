@@ -3,10 +3,9 @@ import { Field } from './components/widget_game/field'
 import { Counter } from './components/widget_game/counter'
 
 document.addEventListener('DOMContentLoaded', function () {
-  const gameContainer = document.getElementById('game-container')
   const counter = new Counter('.score-container')
-  const character = new Character(gameContainer)
-  const field = new Field(gameContainer)
+  const character = new Character('.game-container')
+  const field = new Field('.game-container')
 
   field.createField(16)
 

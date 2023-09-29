@@ -1,5 +1,8 @@
 export class Character {
   constructor (elem) {
+    if (typeof elem === 'string') {
+      elem = document.querySelector(elem)
+    }
     this.gameContainer = elem
     this.currentPosition = 0
     const character = document.createElement('img')
