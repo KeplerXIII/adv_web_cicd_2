@@ -1,3 +1,5 @@
+import cursor from '../../../cursors/cursor.cur'
+
 export class Character {
   constructor (elem) {
     if (typeof elem === 'string') {
@@ -9,6 +11,7 @@ export class Character {
     character.src = 'https://github.com/netology-code/ahj-homeworks/blob/video/dom/pic/goblin.png?raw=true'
     character.id = 'character'
     this.character = character
+    this.character.style.cursor = `url(${cursor}), auto`
   }
 
   moveCharacter (position) {
