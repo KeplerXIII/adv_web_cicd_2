@@ -28,17 +28,11 @@ body {
     cursor: pointer;
 }
 
-
 .game-container {
-    cursor: url('../img/cursor.cur');
     display: grid;
     grid-template-columns: repeat(4, 120px);
     grid-gap: 10px;
 }
-
-/* .game-container:active {
-    cursor: url('../img/cursor.cur'), auto;
-} */
 
 .score-container {
   position: absolute;

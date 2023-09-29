@@ -10,6 +10,18 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.cur$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: 'cursors/[name].[ext]'
+            }
+          }
+        ]
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
